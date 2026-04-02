@@ -1,0 +1,1 @@
+# hackintosh-fujitsu-lifebook-uh90b1
