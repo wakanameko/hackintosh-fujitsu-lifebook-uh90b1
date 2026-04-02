@@ -34,13 +34,13 @@ You can make below options disable via original BIOS.
 On the other hand, you need change below BIOS options too via [`setup_var.efi`](https://github.com/datasone/setup_var.efi) in UEFI Shell.
 
 ```sh
-# CFG Lock
+# CFG Lock 0x1->0x0
 setup_var.efi CpuSetup:0x3C=0x00
 
-# Above 4GB MMIO BIOS assignment
+# Above 4GB MMIO BIOS assignment 0x0->0x1
 setup_var.efi SaSetup:0xE4=0x01
 
-# DVMT Pre-Allocated 32mb->64mb(max)
+# DVMT Pre-Allocated 32mb(0x1)->64mb(0x2)
 setup_var.efi SaSetup:0xDF=0x02
 ```
 
