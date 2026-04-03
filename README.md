@@ -13,9 +13,10 @@ Hackintosh for [Fujitsu LIFEBOOK UH90/B1 (UH Series)](https://www.fmworld.net/fm
 |                 | HDMI / Type-C Output                                      | :white_check_mark: |
 | **Audio**       | Realtek ALC255 HD Audio                                   | :white_check_mark: |
 |                 | 3.5mm AUX Output                                          | :white_check_mark: |
+|                 | Built-in Microphone                                       | :white_check_mark: |
 | **Ethernet**    | Intel Ethernet Connection I219-V                          | :white_check_mark: |
 | **Wireless**    | Intel Dual Band Wireless-AC 8265                          | :white_check_mark: |
-| **Camera**      | Chicony Electronics Co., Ltd FJ/IR Camera                 | :x:                |
+| **Camera**      | ???                                                       | :x: (My machine issue?) |
 | **Keyboard**    | Fujitsu PS/2 Japanese keyboard (106/109 Key)              | :white_check_mark: |
 |                 | Brightness Key                                            | :x:                |
 | **TouchPad**    | Synaptics SMBus TouchPad                                  | :white_check_mark: |
@@ -36,12 +37,6 @@ On the other hand, you need change below BIOS options too via [`setup_var.efi`](
 ```sh
 # CFG Lock 0x1->0x0
 setup_var.efi CpuSetup:0x3C=0x00
-
-# Above 4GB MMIO BIOS assignment 0x0->0x1
-setup_var.efi SaSetup:0xE4=0x01
-
-# DVMT Pre-Allocated 32mb(0x1)->64mb(0x2)
-setup_var.efi SaSetup:0xDF=0x02
 ```
 
 ## :muscle: Usage
